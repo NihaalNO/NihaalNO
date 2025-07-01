@@ -1,4 +1,45 @@
-## Hi there 👋
+# 👋 Hi, I'm Nihaal Odather
+
+**Aspiring Engineer | GenAI Enthusiast | Full-Stack & Blockchain Developer**
+
+Welcome to my GitHub! I’m passionate about building intelligent, secure, and interactive systems by combining cutting-edge technologies like GenAI, Web3, and system-level programming.
+
+---
+
+## 🚀 About Me
+
+- 🔭 Currently building **AI-integrated platforms** and **decentralized innovation tools**
+- 💡 Exploring the intersection of **Generative AI**, **blockchain**, and **3D web development**
+- 🧪 Tinkering with models like **Mistral**, **Ollama**, and **custom LLMs**
+- 🧠 Fine-tuning AI on quantum datasets
+- 🏁 I participated in **FOSSHACK 2025**
+
+---
+
+## 💻 Languages & Technologies I Love
+
+> These are the tools I enjoy working with and continue to master:
+
+- **Frontend**: `TypeScript`, `React`, `Next.js`, `Tailwind CSS`
+- **Backend**: `Node.js`, `MongoDB`,
+- **Blockchain**: `Solidity`, `Web3.js`, `Polygon`
+- **AI & ML**: `Python`, `Ollama`
+- **Low-Level**: `C` (System programming, custom protocols)
+- **3D / UI**: `Three.js`, `Framer Motion`, `Radix UI`
+- **Tools**: `Git`, `Vercel`, `VS Code`, `Notion`
+
+---
+
+## 📫 Let's Connect
+
+- 🌐 [Portfolio]()  
+- 💼 [LinkedIn](https://www.linkedin.com/in/nihaalodather)  
+- 📧 Email: odathernihaal@gmail.com
+
+---
+
+> _"Code with curiosity, build with intent."_ 🚀
+
 
 <!--
 **NihaalNO/NihaalNO** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
