@@ -33,7 +33,7 @@ Welcome to my GitHub! I’m passionate about building intelligent, secure, and i
 ## 📫 Let's Connect
 
 - 🌐 [Portfolio]()  
-- 💼 [LinkedIn](https://www.linkedin.com/in/nihaalodather)  
+- 💼 [LinkedIn](www.linkedin.com/in/nihaal-o-17074632a)  
 - 📧 Email: odathernihaal@gmail.com
 
 ---
