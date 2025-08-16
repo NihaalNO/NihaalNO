@@ -12,7 +12,7 @@ Welcome to my GitHub! I’m passionate about building intelligent, secure, and i
 - 💡 Exploring the intersection of **Generative AI**, **blockchain**, and **3D web development**
 - 🧪 Tinkering with models like **Mistral**, **Ollama**, and **custom LLMs**
 - 🧠 Fine-tuning AI on quantum datasets
-- 🏁 I participated in **FOSSHACK 2025**
+
 
 ---
 
