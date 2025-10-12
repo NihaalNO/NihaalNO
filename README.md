@@ -22,7 +22,6 @@ Welcome to my GitHub! I’m passionate about building intelligent, secure, and i
 
 - **Frontend**: `TypeScript`, `React`, `Next.js`, `Tailwind CSS`
 - **Backend**: `Node.js`, `MongoDB`,
-- **Blockchain**: `Solidity`, `Web3.js`, `Polygon`
 - **AI & ML**: `Python`, `Ollama`
 - **Low-Level**: `C` (System programming, custom protocols)
 - **3D / UI**: `Three.js`, `Framer Motion`, `Radix UI`
