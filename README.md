@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Nihaal Odather
 
-**Aspiring Engineer | GenAI Enthusiast | Full-Stack & Blockchain Developer**
+GenAI Enthusiast | Full-Stack Developer**
 
 Welcome to my GitHub! I’m passionate about building intelligent, secure, and interactive systems by combining cutting-edge technologies like GenAI, Web3, and system-level programming.
 
