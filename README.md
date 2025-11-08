@@ -11,7 +11,7 @@ Welcome to my GitHub! I’m passionate about building intelligent, secure, and i
 - 🔭 Currently building **AI-integrated platforms** and **decentralized innovation tools**
 - 💡 Exploring the intersection of **Generative AI**, **blockchain**, and **3D web development**
 - 🧪 Tinkering with models like **Mistral**, **Ollama**, and **custom LLMs**
-- 🧠 Fine-tuning AI on quantum datasets
+- 🧠 Fine-tuning AI on various datasets
 
 
 ---
