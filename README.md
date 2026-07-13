@@ -16,7 +16,6 @@ and turning ambitious ideas into practical software.
 
 ## 🚀 About Me
 
-- 🎓 Computer Science Engineering student at **PESITM, Shivamogga**
 - 🔭 Building projects across **full-stack development and AI/ML**
 - 🤖 Exploring **intelligent systems, developer tools, and data-driven applications**
 - 🤝 Open to collaborating on **AI/ML, web development, and open-source projects**
