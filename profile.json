@@ -1,0 +1,15 @@
+{
+  "name": "Nihaal N O",
+  "handle": "NihaalNO",
+  "title": "CS Engineering Student",
+  "location": "India",
+  "education": "B.E. CSE · PESITM · 2024–2028",
+  "focus": "AI/ML · Full-stack · Data",
+  "stack": "Python · TypeScript · Next.js · Express · PostgreSQL",
+  "projects": "SmartSQL · Quantalab · Visual-F1",
+  "status": "Building practical AI developer tools",
+  "accent": "#58a6ff",
+  "foreground": "#c9d1d9",
+  "muted": "#8b949e",
+  "background": "#0d1117"
+}
