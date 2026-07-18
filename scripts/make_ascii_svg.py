@@ -10,35 +10,74 @@ from common import ASSETS, ensure_dirs, esc, load_profile
 RAMP = "@%#*+=-:. "
 
 
-def portrait_to_ascii(path: Path, cols: int = 72, rows: int = 44) -> list[str]:
+def portrait_to_ascii(
+    path: Path,
+    cols: int = 78,
+    rows: int = 44,
+) -> list[str]:
     image = Image.open(path).convert("RGB")
     width, height = image.size
 
-    # Favor the upper-center of a portrait: face, hair, neck, and shoulders.
-    crop_width = min(width, int(height * 0.82))
-    left = max(0, (width - crop_width) // 2)
-    top = max(0, int(height * 0.01))
-    bottom = min(height, top + int(crop_width * 1.06))
-    image = image.crop((left, top, left + crop_width, bottom))
+    # Tight head-and-shoulders crop
+    crop_width = int(width * 0.62)
+    crop_height = int(height * 0.68)
+
+    left = (width - crop_width) // 2
+    top = int(height * 0.01)
+
+    image = image.crop(
+        (
+            left,
+            top,
+            left + crop_width,
+            min(height, top + crop_height),
+        )
+    )
 
     gray = ImageOps.grayscale(image)
-    gray = ImageOps.autocontrast(gray, cutoff=1)
-    gray = ImageEnhance.Contrast(gray).enhance(1.35)
-    gray = gray.filter(ImageFilter.UnsharpMask(radius=1.2, percent=120, threshold=3))
-    gray = gray.resize((cols, rows), Image.Resampling.LANCZOS)
 
+    # Improve facial separation without crushing everything into black
+    gray = ImageOps.autocontrast(gray, cutoff=(2, 3))
+    gray = ImageEnhance.Contrast(gray).enhance(1.18)
+    gray = ImageEnhance.Brightness(gray).enhance(1.06)
+
+    gray = gray.filter(
+        ImageFilter.UnsharpMask(
+            radius=1.0,
+            percent=135,
+            threshold=3,
+        )
+    )
+
+    gray = gray.resize(
+        (cols, rows),
+        Image.Resampling.LANCZOS,
+    )
+
+    ramp = "@%#*+=-:. "
     pixels = list(gray.getdata())
     lines: list[str] = []
+
     for y in range(rows):
-        line = "".join(RAMP[min(len(RAMP) - 1, pixels[y * cols + x] * len(RAMP) // 256)] for x in range(cols))
+        line = ""
+
+        for x in range(cols):
+            value = pixels[y * cols + x]
+            index = min(
+                len(ramp) - 1,
+                value * len(ramp) // 256,
+            )
+            line += ramp[index]
+
         lines.append(line.rstrip())
+
     return lines
 
 
 def render_svg(lines: list[str]) -> str:
     p = load_profile()
     width, height = 370, 430
-    text_x, text_y, line_height = 20, 38, 8.45
+    text_x, text_y, line_height = 20, 38, 8.0
     duration = max(4.5, len(lines) * 0.075 + 1.2)
     text_nodes = []
     for index, line in enumerate(lines):
@@ -55,7 +94,7 @@ def render_svg(lines: list[str]) -> str:
   .bg {{ fill: {esc(p['background'])}; }}
   .frame {{ fill: none; stroke: #30363d; }}
   .bar {{ fill: #161b22; }}
-  .row {{ fill: {esc(p['foreground'])}; font: 7.2px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; opacity: 0; animation: reveal {duration:.2f}s linear infinite; }}
+  .row {{ fill: {esc(p['foreground'])}; font: 6.3px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; opacity: 0; animation: reveal {duration:.2f}s linear infinite; }}
   .prompt {{ fill: {esc(p['accent'])}; font: 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }}
   @keyframes reveal {{ 0%, 5% {{ opacity: 0; }} 8%, 86% {{ opacity: 1; }} 94%, 100% {{ opacity: 0; }} }}
 </style>
